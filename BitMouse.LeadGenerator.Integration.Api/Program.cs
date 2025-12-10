@@ -5,6 +5,7 @@ using BitMouse.LeadGenerator.Integration.Service.Settings;
 using Microsoft.Extensions.Options;
 using Polly;
 using Polly.Contrib.WaitAndRetry;
+using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,19 +18,19 @@ builder.Services.AddScoped(config => config.GetService<IOptionsSnapshot<JsonPlac
 
 // Add http clients to the container
 builder.Services.AddHttpClient<JsonPlaceholderHttpClient>()
-    .AddTransientHttpErrorPolicy(policyBuilder => 
+    .AddTransientHttpErrorPolicy(policyBuilder =>
         policyBuilder.WaitAndRetryAsync(Backoff.DecorrelatedJitterBackoffV2(TimeSpan.FromSeconds(3), retryCount: 2)));
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    app.MapOpenApi();
+    app.MapScalarApiReference();
 }
 
 // Turn HTTPS redirection off for development
