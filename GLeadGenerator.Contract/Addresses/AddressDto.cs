@@ -1,5 +1,4 @@
 ﻿using GLeadGenerator.Contract.Geolocations;
-using GLeadGenerator.Contract.Geolocations;
 
 namespace GLeadGenerator.Contract.Addresses;
 
