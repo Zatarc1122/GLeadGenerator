@@ -1,8 +1,8 @@
-﻿using BitMouse.LeadGenerator.Integration.Contract.JsonPlaceholder;
-using BitMouse.LeadGenerator.Integration.Contract.JsonPlaceholder.Users;
+﻿using GLeadGenerator.Integration.Contract.JsonPlaceholder;
+using GLeadGenerator.Integration.Contract.JsonPlaceholder.Users;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BitMouse.LeadGenerator.Integration.Api.Controllers
+namespace GLeadGenerator.Integration.Api.Controllers
 {
     [Route("api/json-placeholder")]
     [ApiController]

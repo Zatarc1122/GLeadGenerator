@@ -1,7 +1,7 @@
-using BitMouse.LeadGenerator.Integration.Contract.JsonPlaceholder;
-using BitMouse.LeadGenerator.Integration.Service.HttpClients.JsonPlaceholder;
-using BitMouse.LeadGenerator.Integration.Service.JsonPlaceholder;
-using BitMouse.LeadGenerator.Integration.Service.Settings;
+using GLeadGenerator.Integration.Contract.JsonPlaceholder;
+using GLeadGenerator.Integration.Service.HttpClients.JsonPlaceholder;
+using GLeadGenerator.Integration.Service.JsonPlaceholder;
+using GLeadGenerator.Integration.Service.Settings;
 using Microsoft.Extensions.Options;
 using Polly;
 using Polly.Contrib.WaitAndRetry;
