@@ -1,6 +1,7 @@
 using GLeadGenerator.Integration.Service.JsonPlaceholder;
 using GLeadGenerator.Integration.Service.HttpClients.JsonPlaceholder;
 using System.Text.Json;
+using GLeadGenerator.Integration.Contract.JsonPlaceholder;
 
 namespace GLeadGenerator.Integration.Service.JsonPlaceholder;
 
