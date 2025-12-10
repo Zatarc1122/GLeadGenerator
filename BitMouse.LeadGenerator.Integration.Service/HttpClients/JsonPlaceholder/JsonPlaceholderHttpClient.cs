@@ -1,8 +1,8 @@
-﻿using BitMouse.LeadGenerator.Integration.Contract.JsonPlaceholder;
-using BitMouse.LeadGenerator.Integration.Service.Settings;
+using GLeadGenerator.Integration.Contract.JsonPlaceholder;
+using GLeadGenerator.Integration.Service.Settings;
 using System.Web;
 
-namespace BitMouse.LeadGenerator.Integration.Service.HttpClients.JsonPlaceholder;
+namespace GLeadGenerator.Integration.Service.HttpClients.JsonPlaceholder;
 
 public class JsonPlaceholderHttpClient
 {

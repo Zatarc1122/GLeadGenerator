@@ -1,9 +1,9 @@
-﻿using BitMouse.LeadGenerator.Integration.Contract.JsonPlaceholder;
-using BitMouse.LeadGenerator.Integration.Contract.JsonPlaceholder.Users;
-using BitMouse.LeadGenerator.Integration.Service.HttpClients.JsonPlaceholder;
+using GLeadGenerator.Integration.Contract.JsonPlaceholder;
+using GLeadGenerator.Integration.Contract.JsonPlaceholder.Users;
+using GLeadGenerator.Integration.Service.HttpClients.JsonPlaceholder;
 using System.Text.Json;
 
-namespace BitMouse.LeadGenerator.Integration.Service.JsonPlaceholder;
+namespace GLeadGenerator.Integration.Service.JsonPlaceholder;
 
 public class JsonPlaceholderService : IJsonPlaceholderService
 {

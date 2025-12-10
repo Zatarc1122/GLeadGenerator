@@ -1,4 +1,4 @@
-﻿namespace BitMouse.LeadGenerator.Integration.Service.Settings;
+namespace GLeadGenerator.Integration.Service.Settings;
 
 public class JsonPlaceholderApiSettings
 {
