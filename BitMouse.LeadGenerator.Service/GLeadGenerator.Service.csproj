@@ -11,8 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BitMouse.LeadGenerator.Contract\BitMouse.LeadGenerator.Contract.csproj" />
-    <ProjectReference Include="..\BitMouse.LeadGenerator.Model\BitMouse.LeadGenerator.Model.csproj" />
+    <ProjectReference Include="..\BitMouse.LeadGenerator.Contract\GLeadGenerator.Contract.csproj" />
+    <ProjectReference Include="..\BitMouse.LeadGenerator.Model\GLeadGenerator.Model.csproj" />
   </ItemGroup>
 
 </Project>

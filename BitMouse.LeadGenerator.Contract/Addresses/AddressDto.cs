@@ -1,6 +1,7 @@
 ﻿using BitMouse.LeadGenerator.Contract.Geolocations;
+using GLeadGenerator.Contract.Geolocations;
 
-namespace BitMouse.LeadGenerator.Contract.Addresses;
+namespace GLeadGenerator.Contract.Addresses;
 
 public class AddressDto
 {
