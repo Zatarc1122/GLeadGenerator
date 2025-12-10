@@ -1,7 +1,6 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.4.33213.308
+# Visual Studio Version 18
+VisualStudioVersion = 18.1.11304.174 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GLeadGenerator.Api", "GLeadGenerator.Api\GLeadGenerator.Api.csproj", "{CF5BDA01-7B0B-4E00-8F10-75769076DA37}"
 EndProject
@@ -20,8 +19,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GLeadGenerator.Integration.Service", "GLeadGenerator.Integration.Service\GLeadGenerator.Integration.Service.csproj", "{BC30EE99-E018-4177-909E-896EA00E98E3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GLeadGenerator.Integration.Contract", "GLeadGenerator.Integration.Contract\GLeadGenerator.Integration.Contract.csproj", "{6D0D5D0C-59E1-4759-A1DD-DE8CF0C89A26}"
-EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{E9CF721A-E086-483F-969E-E1B215E6B74F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GLeadGenerator.Service", "GLeadGenerator.Service\GLeadGenerator.Service.csproj", "{371786DF-8A4B-41C6-AB02-EAD48D184CC4}"
 EndProject
@@ -63,10 +60,6 @@ Global
 		{6D0D5D0C-59E1-4759-A1DD-DE8CF0C89A26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D0D5D0C-59E1-4759-A1DD-DE8CF0C89A26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D0D5D0C-59E1-4759-A1DD-DE8CF0C89A26}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E9CF721A-E086-483F-969E-E1B215E6B74F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E9CF721A-E086-483F-969E-E1B215E6B74F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E9CF721A-E086-483F-969E-E1B215E6B74F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E9CF721A-E086-483F-969E-E1B215E6B74F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{371786DF-8A4B-41C6-AB02-EAD48D184CC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{371786DF-8A4B-41C6-AB02-EAD48D184CC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{371786DF-8A4B-41C6-AB02-EAD48D184CC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
