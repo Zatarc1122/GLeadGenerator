@@ -16,5 +16,7 @@
     </None>
     <None Include="docker-compose.yml" />
     <None Include=".dockerignore" />
+    <None Include="GLeadGenerator.Web\Program.cs" />
+    <None Include="_renameNamespaces.ps1" />
   </ItemGroup>
 </Project>

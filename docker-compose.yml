@@ -1,12 +1,12 @@
-version: '3.4'
+﻿version: '3.4'
 
 services:
-  bitmouse.leadgenerator.api:
+  GLeadGenerator.api:
     image: ${DOCKER_REGISTRY-}bitmouseleadgeneratorapi
-    container_name: BitMouse.LeadGenerator.Api
+    container_name: GLeadGenerator.Api
     build:
       context: .
-      dockerfile: BitMouse.LeadGenerator.Api/Dockerfile
+      dockerfile: GLeadGenerator.Api/Dockerfile
     ports:
         - 5000:80
         - 5001:443
@@ -14,24 +14,24 @@ services:
         - integration
         - database
 
-  bitmouse.leadgenerator.integration.api:
+  GLeadGenerator.integration.api:
     image: ${DOCKER_REGISTRY-}bitmouseleadgeneratorintegrationapi
-    container_name: BitMouse.LeadGenerator.Integration.Api
+    container_name: GLeadGenerator.Integration.Api
     build:
       context: .
-      dockerfile: BitMouse.LeadGenerator.Integration.Api/Dockerfile
+      dockerfile: GLeadGenerator.Integration.Api/Dockerfile
     ports:
         - 5002:80
         - 5003:443
     networks:
         - integration
 
-  bitmouse.leadgenerator.database:
+  GLeadGenerator.database:
     image: ${DOCKER_REGISTRY-}bitmouseleadgeneratordatabase
     build:
       context: .
-      dockerfile: BitMouse.LeadGenerator.Database/Dockerfile
-    container_name: BitMouse.LeadGenerator.Database
+      dockerfile: GLeadGenerator.Database/Dockerfile
+    container_name: GLeadGenerator.Database
     environment:
         - ACCEPT_EULA=Y
         - SA_PASSWORD=E8!49NaJXRFYvE2qRm7m4YD8cfoEy7F
