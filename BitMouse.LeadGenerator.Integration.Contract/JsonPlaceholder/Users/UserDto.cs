@@ -1,8 +1,8 @@
-﻿using BitMouse.LeadGenerator.Integration.Contract.JsonPlaceholder.Address;
-using BitMouse.LeadGenerator.Integration.Contract.JsonPlaceholder.Company;
+using GLeadGenerator.Integration.Contract.JsonPlaceholder.Address;
+using GLeadGenerator.Integration.Contract.JsonPlaceholder.Company;
 using System.Text.Json.Serialization;
 
-namespace BitMouse.LeadGenerator.Integration.Contract.JsonPlaceholder.Users;
+namespace GLeadGenerator.Integration.Contract.JsonPlaceholder.Users;
 
 public class UserDto
 {

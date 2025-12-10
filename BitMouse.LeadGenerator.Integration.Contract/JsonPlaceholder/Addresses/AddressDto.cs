@@ -1,7 +1,7 @@
-﻿using BitMouse.LeadGenerator.Integration.Contract.JsonPlaceholder.Address.Geo;
+using GLeadGenerator.Integration.Contract.JsonPlaceholder.Address.Geo;
 using System.Text.Json.Serialization;
 
-namespace BitMouse.LeadGenerator.Integration.Contract.JsonPlaceholder.Address;
+namespace GLeadGenerator.Integration.Contract.JsonPlaceholder.Address;
 
 public class AddressDto
 {

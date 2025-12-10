@@ -1,6 +1,6 @@
-﻿using BitMouse.LeadGenerator.Integration.Contract.JsonPlaceholder.Users;
+using GLeadGenerator.Integration.Contract.JsonPlaceholder.Users;
 
-namespace BitMouse.LeadGenerator.Integration.Contract.JsonPlaceholder;
+namespace GLeadGenerator.Integration.Contract.JsonPlaceholder;
 
 public class GetUsersResponse
 {

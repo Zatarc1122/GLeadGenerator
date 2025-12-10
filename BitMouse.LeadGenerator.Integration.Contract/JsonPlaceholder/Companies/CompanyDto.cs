@@ -1,6 +1,6 @@
-﻿using System.Text.Json.Serialization;
+using System.Text.Json.Serialization;
 
-namespace BitMouse.LeadGenerator.Integration.Contract.JsonPlaceholder.Company;
+namespace GLeadGenerator.Integration.Contract.JsonPlaceholder.Company;
 
 public class CompanyDto
 {

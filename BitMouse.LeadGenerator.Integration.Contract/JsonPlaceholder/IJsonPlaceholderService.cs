@@ -1,4 +1,4 @@
-﻿namespace BitMouse.LeadGenerator.Integration.Contract.JsonPlaceholder;
+namespace GLeadGenerator.Integration.Contract.JsonPlaceholder;
 
 public interface IJsonPlaceholderService
 {

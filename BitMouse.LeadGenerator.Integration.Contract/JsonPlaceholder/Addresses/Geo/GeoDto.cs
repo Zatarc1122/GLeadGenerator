@@ -1,6 +1,6 @@
-﻿using System.Text.Json.Serialization;
+using System.Text.Json.Serialization;
 
-namespace BitMouse.LeadGenerator.Integration.Contract.JsonPlaceholder.Address.Geo;
+namespace GLeadGenerator.Integration.Contract.JsonPlaceholder.Address.Geo;
 
 public class GeoDto
 {
