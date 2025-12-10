@@ -1,0 +1,51 @@
+version: "3.9"
+
+services:
+  gleadgenerator.api:
+    image: ${DOCKER_REGISTRY-}gleadgeneratorapi
+    container_name: GLeadGenerator.Api
+    build:
+      context: .
+      dockerfile: GLeadGenerator.Api/Dockerfile
+    ports:
+      - "5000:80"
+      - "5001:443"
+    networks:
+      - integration
+      - database
+
+  gleadgenerator.integration.api:
+    image: ${DOCKER_REGISTRY-}gleadgeneratorintegrationapi
+    container_name: GLeadGenerator.Integration.Api
+    build:
+      context: .
+      dockerfile: GLeadGenerator.Integration.Api/Dockerfile
+    ports:
+      - "5002:80"
+      - "5003:443"
+    networks:
+      - integration
+
+  gleadgenerator.database:
+    image: ${DOCKER_REGISTRY-}gleadgeneratordatabase
+    container_name: GLeadGenerator.Database
+    build:
+      context: .
+      dockerfile: GLeadGenerator.Database/Dockerfile
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=E8!49NaJXRFYvE2qRm7m4YD8cfoEy7F
+    ports:
+      - "1433:1433"
+    restart: unless-stopped
+    volumes:
+      - database-data:/var/opt/mssql
+    networks:
+      - database
+
+networks:
+  integration:
+  database:
+
+volumes:
+  database-data:
