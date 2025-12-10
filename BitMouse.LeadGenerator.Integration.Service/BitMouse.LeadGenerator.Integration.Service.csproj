@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GLeadGenerator.Integration.Contract\GLeadGenerator.Integration.Contract.csproj" />
+    <ProjectReference Include="..\BitMouse.LeadGenerator.Integration.Contract\BitMouse.LeadGenerator.Integration.Contract.csproj" />
   </ItemGroup>
 
   <ItemGroup>
