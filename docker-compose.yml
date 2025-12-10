@@ -1,47 +1,47 @@
-version: '3.4'
+version: "3.9"
 
 services:
-  bitmouse.leadgenerator.api:
-    image: ${DOCKER_REGISTRY-}bitmouseleadgeneratorapi
-    container_name: BitMouse.LeadGenerator.Api
+  gleadgenerator.api:
+    image: ${DOCKER_REGISTRY-}gleadgeneratorapi
+    container_name: GLeadGenerator.Api
     build:
       context: .
-      dockerfile: BitMouse.LeadGenerator.Api/Dockerfile
+      dockerfile: GLeadGenerator.Api/Dockerfile
     ports:
-        - 5000:80
-        - 5001:443
+      - "5000:80"
+      - "5001:443"
     networks:
-        - integration
-        - database
+      - integration
+      - database
 
-  bitmouse.leadgenerator.integration.api:
-    image: ${DOCKER_REGISTRY-}bitmouseleadgeneratorintegrationapi
-    container_name: BitMouse.LeadGenerator.Integration.Api
+  gleadgenerator.integration.api:
+    image: ${DOCKER_REGISTRY-}gleadgeneratorintegrationapi
+    container_name: GLeadGenerator.Integration.Api
     build:
       context: .
-      dockerfile: BitMouse.LeadGenerator.Integration.Api/Dockerfile
+      dockerfile: GLeadGenerator.Integration.Api/Dockerfile
     ports:
-        - 5002:80
-        - 5003:443
+      - "5002:80"
+      - "5003:443"
     networks:
-        - integration
+      - integration
 
-  bitmouse.leadgenerator.database:
-    image: ${DOCKER_REGISTRY-}bitmouseleadgeneratordatabase
+  gleadgenerator.database:
+    image: ${DOCKER_REGISTRY-}gleadgeneratordatabase
+    container_name: GLeadGenerator.Database
     build:
       context: .
-      dockerfile: BitMouse.LeadGenerator.Database/Dockerfile
-    container_name: BitMouse.LeadGenerator.Database
+      dockerfile: GLeadGenerator.Database/Dockerfile
     environment:
-        - ACCEPT_EULA=Y
-        - SA_PASSWORD=E8!49NaJXRFYvE2qRm7m4YD8cfoEy7F
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=E8!49NaJXRFYvE2qRm7m4YD8cfoEy7F
     ports:
-        - 1433:1433
+      - "1433:1433"
     restart: unless-stopped
     volumes:
-        - ~/apps/mssql/data:/var/lib/mssqlql/data
+      - database-data:/var/opt/mssql
     networks:
-        - database
+      - database
 
 networks:
   integration:

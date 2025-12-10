@@ -1,4 +1,4 @@
-# Lead generator
+﻿# Lead generator
 
 This project is a result of a technical test given by Asseco SEE. The purpose of the test was to showcase the author's skills in .NET Core and Web technologies.
 
@@ -24,7 +24,7 @@ It is strongly recommended that you install the following software before runnin
 git clone https://github.com/frakic/LeadGenerator
 ```
 
-2.  From there you can open **BitMouse.LeadGenerator.sln** in Visual Studio.
+2.  From there you can open **GLeadGenerator.sln** in Visual Studio.
 
 3.  If you have Docker Desktop installed, Visual Studio should pull all of the required images and run docker-compose on start.
 
@@ -35,7 +35,7 @@ git clone https://github.com/frakic/LeadGenerator
 5.  Once the backend projects are running and you can see the Swagger UI in your browser, it's time to go into the frontent project folder:
 
 ```bash
-cd /BitMouse.LeadGenerator/BitMouse.LeadGenerator.Web/ClientApp
+cd /GLeadGenerator/GLeadGenerator.Web/ClientApp
 ```
 
 6.  Install dependencies:
@@ -55,9 +55,9 @@ npm run dev
 ## Functionalities
 
 1. **Database**: Upon successfully building and running all backend projects, you can manually inspect the database using MS SSMS or your preferred database management tool. The credentials can be found in _setup.sql_ script on line 5.
-2. **Integration API**: Functions as a separate application with its own Swagger UI, which can be viewed by setting the "composeLaunchServiceName" property in _launchSettings.json_ file to "bitmouse.leadgenerator.integration.api" and running the project with docker-compose.
-3. **Sending email**: Since this is a mock app, a fake SMTP service called [Ethereal Email](https://ethereal.email/login) is being used. If you want to check whether the emails are actually being delivered to the recipient, you can log in using the credentials provided in the _appsettings.Development.json_ file in the BitMouse.LeadGenerator.Api project.
-4. **Logging**: Application logs with exceptions and other useful information can be viewed by going into a running docker container _BitMouse.LeadGenerator.Api_ and navigating to /var/log/LeadGenerator.Api folder.
+2. **Integration API**: Functions as a separate application with its own Swagger UI, which can be viewed by setting the "composeLaunchServiceName" property in _launchSettings.json_ file to "GLeadGenerator.integration.api" and running the project with docker-compose.
+3. **Sending email**: Since this is a mock app, a fake SMTP service called [Ethereal Email](https://ethereal.email/login) is being used. If you want to check whether the emails are actually being delivered to the recipient, you can log in using the credentials provided in the _appsettings.Development.json_ file in the GLeadGenerator.Api project.
+4. **Logging**: Application logs with exceptions and other useful information can be viewed by going into a running docker container _GLeadGenerator.Api_ and navigating to /var/log/LeadGenerator.Api folder.
 
 ## Troubleshooting
 
@@ -65,6 +65,7 @@ If you encounter any issues while trying to run or build the project, you can re
 
 1. **Dependency issues**: Make sure that you have installed all required dependencies by following the instructions in the Installation section. If you are encountering an error related to a missing dependency, try reinstalling the dependencies by running the relevant command(s) again.
 
-2. **Database issues**: When the database container starts, it uses _entrypoint.sh_, _mssql-customize.sh_ and _setup.sql_ scripts, located in /BitMouse.LeadGenerator.Database folder, in order to initialize the database. If you are unable to connect to the database on localhost, try deleting the database container, restarting docker and running docker-compose again. Also, make sure that the first two mentioned scripts have line endings set to LF, as opposed to CRLF.
+2. **Database issues**: When the database container starts, it uses _entrypoint.sh_, _mssql-customize.sh_ and _setup.sql_ scripts, located in /GLeadGenerator.Database folder, in order to initialize the database. If you are unable to connect to the database on localhost, try deleting the database container, restarting docker and running docker-compose again. Also, make sure that the first two mentioned scripts have line endings set to LF, as opposed to CRLF.
 
 3. **Port(s) unavailable**: LeadGenerator uses the following ports for all of its components: 5000, 5001, 5002, 5003, 5004. Make sure that you have nothing else running on these before running LeadGenerator.
+
