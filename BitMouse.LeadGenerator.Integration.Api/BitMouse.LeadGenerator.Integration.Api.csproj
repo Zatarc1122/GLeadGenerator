@@ -19,6 +19,7 @@
   <ItemGroup>
     <ProjectReference Include="..\BitMouse.LeadGenerator.Integration.Contract\BitMouse.LeadGenerator.Integration.Contract.csproj" />
     <ProjectReference Include="..\BitMouse.LeadGenerator.Integration.Service\BitMouse.LeadGenerator.Integration.Service.csproj" />
+    <ProjectReference Include="..\BitMouse.LeadGenerator.Infrastructure\BitMouse.LeadGenerator.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

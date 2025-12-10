@@ -1,3 +1,5 @@
+using GLeadGenerator.Infrastructure.AspNetCore.Middleware.Error;
+using GLeadGenerator.Infrastructure.AspNetCore.Validation;
 using GLeadGenerator.Integration.Contract.JsonPlaceholder;
 using GLeadGenerator.Integration.Service.HttpClients.JsonPlaceholder;
 using GLeadGenerator.Integration.Service.JsonPlaceholder;
@@ -21,7 +23,16 @@ builder.Services.AddHttpClient<JsonPlaceholderHttpClient>()
     .AddTransientHttpErrorPolicy(policyBuilder =>
         policyBuilder.WaitAndRetryAsync(Backoff.DecorrelatedJitterBackoffV2(TimeSpan.FromSeconds(3), retryCount: 2)));
 
-builder.Services.AddControllers();
+builder.Services.AddScoped<DataAnnotationsValidatorInterceptor>();
+builder.Services.AddScoped<IExceptionHandler, DataAnnotationsValidationExceptionHandler>();
+builder.Services.AddScoped<IExceptionHandler, BusinessExceptionHandler>();
+builder.Services.AddScoped<IExceptionHandler, DefaultExceptionHandler>();
+builder.Services.AddScoped<ExceptionHandlerFactory>();
+
+builder.Services.AddControllers(options =>
+{
+    options.Filters.Add<DataAnnotationsValidatorInterceptor>();
+});
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApi();
 
@@ -39,6 +50,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHttpsRedirection();
 }
 
+app.UseMiddleware<ErrorMiddleware>();
 app.UseAuthorization();
 
 app.MapControllers();
