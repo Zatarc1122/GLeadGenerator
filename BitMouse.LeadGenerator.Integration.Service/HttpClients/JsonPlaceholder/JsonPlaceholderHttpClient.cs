@@ -1,4 +1,3 @@
-using GLeadGenerator.Integration.Contract.JsonPlaceholder;
 using GLeadGenerator.Integration.Service.Settings;
 using System.Web;
 
