@@ -66,14 +66,18 @@ builder.Services.AddScoped(config => config.GetService<IOptionsSnapshot<Connecti
 builder.Services.AddTransient<IUserBuilder, UserBuilder>();
 
 // Add CORS
-var appSettings = builder.Configuration.Get<AppSettings>();
+var appSettings = builder.Configuration.Get<AppSettings>() ?? new AppSettings();
+var allowedOrigins = (appSettings.AllowedOrigins?.Length ?? 0) > 0
+    ? appSettings.AllowedOrigins!
+    : new[] { "http://localhost:5004" }; // or use AllowAnyOrigin() if you prefer
+
 builder.Services.AddCors(options =>
 {
-    options.AddDefaultPolicy(builder =>
+    options.AddDefaultPolicy(policy =>
     {
-        builder.WithOrigins(appSettings!.AllowedOrigins)
-            .AllowAnyMethod()
-            .AllowAnyHeader();
+        policy.WithOrigins(allowedOrigins)
+              .AllowAnyMethod()
+              .AllowAnyHeader();
     });
 });
 

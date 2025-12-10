@@ -4,9 +4,9 @@ USER root
 
 RUN mkdir /usr/config
 
-COPY ["BitMouse.LeadGenerator.Database/entrypoint.sh", "/usr/config/entrypoint.sh"]
-COPY ["BitMouse.LeadGenerator.Database/mssql-customize.sh", "/usr/config/mssql-customize.sh"]
-COPY ["BitMouse.LeadGenerator.Database/setup.sql", "/usr/config/setup.sql"]
+COPY ["GLeadGenerator.Database/entrypoint.sh", "/usr/config/entrypoint.sh"]
+COPY ["GLeadGenerator.Database/mssql-customize.sh", "/usr/config/mssql-customize.sh"]
+COPY ["GLeadGenerator.Database/setup.sql", "/usr/config/setup.sql"]
 
 WORKDIR /usr/config
 

@@ -1,9 +1,9 @@
 {
   "name": "lead-generator-web",
   "author": {
-    "name": "Filip Rakić",
-    "email": "frakic@frakic.com",
-    "url": "https://github.com/frakic/LeadGenerator"
+    "name": "Sebo",
+    "email": "sebofejs123@gmail.com",
+    "url": "https://github.com/Zatarc1122/GLeadGenerator"
   },
   "private": true,
   "version": "1.0.0",
@@ -14,20 +14,23 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@mui/lab": "^5.0.0-alpha.119",
     "@mui/material": "^5.11.8",
-    "@types/node": "^18.13.0",
+    "@types/node": "^22.12.0",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
-    "@vitejs/plugin-react": "^3.1.0",
+    "@vitejs/plugin-react": "^5.1.2",
     "axios": "^1.3.2",
+    "eslint": "^9.39.1",
     "react-hook-form": "^7.43.1",
     "react-query": "^3.39.3",
     "typescript": "^4.9.3",
-    "vite": "^4.1.0"
+    "vite": "^7.2.7"
   }
 }
