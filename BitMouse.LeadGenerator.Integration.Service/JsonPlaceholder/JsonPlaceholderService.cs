@@ -1,3 +1,4 @@
+using GLeadGenerator.Integration.Contract.JsonPlaceholder;
 using GLeadGenerator.Integration.Service.HttpClients.JsonPlaceholder;
 using System.Text.Json;
 
@@ -11,6 +12,7 @@ public class JsonPlaceholderService : IJsonPlaceholderService
     {
         _jsonPlaceholderHttpClient = jsonPlaceholderHttpClient;
     }
+
     public async Task<GetUsersResponse> GetUsersAsync(GetUsersRequest request)
     {
         var textUsers = await _jsonPlaceholderHttpClient.GetUsersAsTextAsync(request);
