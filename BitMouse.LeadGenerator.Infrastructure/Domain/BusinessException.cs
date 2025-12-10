@@ -1,4 +1,4 @@
-﻿namespace BitMouse.LeadGenerator.Infrastructure.Domain;
+namespace GLeadGenerator.Infrastructure.Domain;
 
 public class BusinessException : Exception
 {
@@ -10,3 +10,4 @@ public class BusinessException : Exception
         Parameter = parameter;
     }
 }
+

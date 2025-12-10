@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-namespace BitMouse.LeadGenerator.Infrastructure.AspNetCore.Validation;
+namespace GLeadGenerator.Infrastructure.AspNetCore.Validation;
 
 public class InvalidModelStateException : Exception
 {
@@ -12,3 +12,4 @@ public class InvalidModelStateException : Exception
         ModelState = modelState;
     }
 }
+

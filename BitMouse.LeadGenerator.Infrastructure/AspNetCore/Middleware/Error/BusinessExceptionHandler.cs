@@ -1,7 +1,7 @@
-﻿using BitMouse.LeadGenerator.Infrastructure.Domain;
+using GLeadGenerator.Infrastructure.Domain;
 using System.Net;
 
-namespace BitMouse.LeadGenerator.Infrastructure.AspNetCore.Middleware.Error;
+namespace GLeadGenerator.Infrastructure.AspNetCore.Middleware.Error;
 
 public class BusinessExceptionHandler : IExceptionHandler
 {
@@ -23,3 +23,4 @@ public class BusinessExceptionHandler : IExceptionHandler
         return errorDetails;
     }
 }
+

@@ -1,4 +1,4 @@
-﻿namespace BitMouse.LeadGenerator.Infrastructure.Settings;
+namespace GLeadGenerator.Infrastructure.Settings;
 
 public class ConnectionStrings
 {

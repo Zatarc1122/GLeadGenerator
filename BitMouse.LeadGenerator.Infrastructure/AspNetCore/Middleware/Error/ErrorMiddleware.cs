@@ -1,9 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using System.Text;
 using System.Text.Json;
 
-namespace BitMouse.LeadGenerator.Infrastructure.AspNetCore.Middleware.Error;
+namespace GLeadGenerator.Infrastructure.AspNetCore.Middleware.Error;
 
 public class ErrorMiddleware
 {
@@ -82,3 +82,4 @@ public class ErrorMiddleware
         return body;
     }
 }
+

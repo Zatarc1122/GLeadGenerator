@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace BitMouse.LeadGenerator.Infrastructure.AspNetCore.Validation;
+namespace GLeadGenerator.Infrastructure.AspNetCore.Validation;
 
 public class DataAnnotationsValidatorInterceptor : IAsyncActionFilter
 {
@@ -14,3 +14,4 @@ public class DataAnnotationsValidatorInterceptor : IAsyncActionFilter
         await next();
     }
 }
+

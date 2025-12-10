@@ -1,6 +1,6 @@
-﻿using System.Net;
+using System.Net;
 
-namespace BitMouse.LeadGenerator.Infrastructure.AspNetCore.Middleware.Error;
+namespace GLeadGenerator.Infrastructure.AspNetCore.Middleware.Error;
 
 public class DefaultExceptionHandler : IExceptionHandler
 {
@@ -16,3 +16,4 @@ public class DefaultExceptionHandler : IExceptionHandler
         return errorDetails;
     }
 }
+

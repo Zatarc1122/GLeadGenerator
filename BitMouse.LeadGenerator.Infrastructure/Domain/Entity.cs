@@ -1,4 +1,4 @@
-﻿namespace BitMouse.LeadGenerator.Infrastructure.Domain;
+namespace GLeadGenerator.Infrastructure.Domain;
 
 public abstract class Entity<TId>
 {
@@ -8,3 +8,4 @@ public abstract class Entity<TId>
 public class Entity : Entity<int>
 {
 }
+

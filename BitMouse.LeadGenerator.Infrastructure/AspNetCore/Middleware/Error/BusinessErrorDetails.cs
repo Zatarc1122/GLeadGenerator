@@ -1,6 +1,6 @@
-﻿using System.Net;
+using System.Net;
 
-namespace BitMouse.LeadGenerator.Infrastructure.AspNetCore.Middleware.Error;
+namespace GLeadGenerator.Infrastructure.AspNetCore.Middleware.Error;
 
 public class BusinessErrorDetails : ErrorDetails
 {
@@ -19,3 +19,4 @@ public class BusinessErrorDetails : ErrorDetails
         Parameter = parameter;
     }
 }
+

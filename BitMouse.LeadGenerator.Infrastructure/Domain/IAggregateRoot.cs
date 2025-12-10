@@ -1,5 +1,6 @@
-﻿namespace BitMouse.LeadGenerator.Infrastructure.Domain;
+namespace GLeadGenerator.Infrastructure.Domain;
 
 public interface IAggregateRoot
 {
 }
+

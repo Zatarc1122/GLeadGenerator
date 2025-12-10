@@ -1,6 +1,6 @@
-﻿using System.Net;
+using System.Net;
 
-namespace BitMouse.LeadGenerator.Infrastructure.AspNetCore.Middleware.Error;
+namespace GLeadGenerator.Infrastructure.AspNetCore.Middleware.Error;
 
 public class ValidationErrorDetails : ErrorDetails
 {
@@ -14,3 +14,4 @@ public class ValidationErrorDetails : ErrorDetails
         Errors = errors;
     }
 }
+

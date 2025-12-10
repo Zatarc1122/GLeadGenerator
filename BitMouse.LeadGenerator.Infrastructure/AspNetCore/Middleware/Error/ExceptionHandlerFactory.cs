@@ -1,4 +1,4 @@
-﻿namespace BitMouse.LeadGenerator.Infrastructure.AspNetCore.Middleware.Error;
+namespace GLeadGenerator.Infrastructure.AspNetCore.Middleware.Error;
 
 public class ExceptionHandlerFactory
 {
@@ -19,3 +19,4 @@ public class ExceptionHandlerFactory
         return handler ?? defaultHandler;
     }
 }
+

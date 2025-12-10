@@ -1,10 +1,10 @@
-using BitMouse.LeadGenerator.Infrastructure.AspNetCore.Validation;
+using GLeadGenerator.Infrastructure.AspNetCore.Validation;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 
-namespace BitMouse.LeadGenerator.Infrastructure.AspNetCore.Middleware.Error;
+namespace GLeadGenerator.Infrastructure.AspNetCore.Middleware.Error;
 
 public class DataAnnotationsValidationExceptionHandler : IExceptionHandler
 {
@@ -45,3 +45,4 @@ public class DataAnnotationsValidationExceptionHandler : IExceptionHandler
         }
     }
 }
+
